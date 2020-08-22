@@ -9,7 +9,7 @@ import java.util.regex.*;
 public class Waiter {
 	static int[] waiter(int[] number, int q) {
         /*
-         * Write your code here.
+         * Write your code here.11
          */
 		
 		int answer[] = new int[number.length];

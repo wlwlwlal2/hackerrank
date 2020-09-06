@@ -15,7 +15,7 @@ public class Waiter {
          int answer[] = new int[number.length];
          ArrayList<Integer> temp = new ArrayList<Integer>();
          
-         int i,n=0,j=0,m=0;
+         int i,n=0,j=0;
          int k = 0, p = 0;
          int max = 0;
          int count2;
@@ -49,16 +49,14 @@ public class Waiter {
          
          for(i = 0; i<q; i++) {
              if(n == 0) {
-                 
-             for(j = 0; j<temp.size();j++) {
-                 if(temp.get(j) % snum[i] == 0) {
-                     answer[k++] = temp.get(j);
-                     temp.remove(j);
-                     j--;
-                     n = 1;
+                 for(j = 0; j<temp.size();j++) {
+                	 if(temp.get(j) % snum[i] == 0) {
+                		 answer[k++] = temp.get(j);
+                		 temp.remove(j);
+                		 j--;
+                		 n = 1;
+                	 }
                  }
-                 }
-             
              }
              else if(n == 1){
                  
@@ -68,18 +66,15 @@ public class Waiter {
                      temp.remove(temp.size()-j);
                      j--;
                      n = 0;
-                 
+                 }
              }
-
-         }
-             
              }
-         
      }
      if ( q % 2 == 0) {
      for(int l=temp.size()-1; l>=0; l--) 
          answer[k++] = temp.get(l);
-     } else {
+     } 
+     else {
      for(int l=0; l<temp.size(); l++) 
         answer[k++] = temp.get(l);
      }
